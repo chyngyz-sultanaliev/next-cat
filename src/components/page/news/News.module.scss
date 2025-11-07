@@ -1,0 +1,35 @@
+.news {
+  h1 {
+    font-weight: 700;
+    font-size: 38px;
+  }
+  .videos {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    .video {
+      iframe {
+        width: 400px;
+        height: 200px;
+        border-radius: 12px;
+        opacity: 0;
+        transform: translatex(120px);
+        animation: fadeUtp 1.4s forwards;
+        @keyframes fadeUtp {
+          to {
+            opacity: 1;
+            transform: translatex(0);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .videoWrapper {
+    width: 100%;
+    padding-bottom: 177.81%;
+  }
+}
