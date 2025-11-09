@@ -4,19 +4,22 @@ import CatsCard from "@/src/components/ui/catsCard/CatsCard";
 import sass from "./Cats.module.scss";
 
 interface Cat {
+  id: string;
   name: string;
   color: string;
   age: number;
   paws: number;
   price: number;
+  sale: number;
   image: string;
 }
 
 interface Props {
   cats: Cat[];
+  token: string;
 }
 
-const Cats = ({ cats }: Props) => {
+const Cats = ({ token, cats }: Props) => {
   const [sortPrice, setSortPrice] = useState("default");
   const [sortAge, setSortAge] = useState("default");
 
@@ -54,7 +57,7 @@ const Cats = ({ cats }: Props) => {
       </div>
       <div className={sass.cats}>
         {sortedCats.map((cat, index) => (
-          <CatsCard key={index} cat={cat} />
+          <CatsCard token={token} key={index} cat={cat} />
         ))}
       </div>
     </div>

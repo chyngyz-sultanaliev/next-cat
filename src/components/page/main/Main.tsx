@@ -18,7 +18,7 @@ const Main = async () => {
   }
   const data = await res.json();
   const cats = data.cats;
-  return <Cats cats={cats} />;
+  return <Cats cats={cats} token={token} />;
 };
 
 export default Main;
