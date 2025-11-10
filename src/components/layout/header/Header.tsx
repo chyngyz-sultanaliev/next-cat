@@ -8,8 +8,9 @@ import { FC } from "react";
 import { CiLogout } from "react-icons/ci";
 interface HeaderProps {
   token: string;
+  countCat: string;
 }
-const Header: FC<HeaderProps> = ({ token }) => {
+const Header: FC<HeaderProps> = ({ token, countCat }) => {
   const router = useRouter();
 
   const logout = async () => {
@@ -47,7 +48,7 @@ const Header: FC<HeaderProps> = ({ token }) => {
         </div>
 
         <div className={sass.bottom}>
-          <h1>Найдено 349 котов</h1>
+          <h1>Найдено {countCat} котов</h1>
           <a onClick={logout} className={sass.logoutBtn}>
             Logout <CiLogout />
           </a>

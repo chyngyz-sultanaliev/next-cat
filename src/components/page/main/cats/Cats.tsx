@@ -34,7 +34,7 @@ const Cats = ({ token, cats }: Props) => {
       if (sortAge === "old") return b.age - a.age;
       return 0;
     });
-
+  console.log(sortedCats);
   return (
     <div className="container">
       <div className={sass.sortControls}>

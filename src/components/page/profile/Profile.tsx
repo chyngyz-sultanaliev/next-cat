@@ -87,7 +87,7 @@ async function Profile() {
         </span>
       </div>
 
-      {!profile.isAdmin ? (
+      {profile.isAdmin ? (
         <div className={sass.adminPanel}>
           <h3>Панель администратора</h3>
           <p>

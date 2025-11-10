@@ -37,7 +37,7 @@ const CatsCard = ({ cat, token }: Props) => {
             isFavorite={cat.isFavorite}
           />
         </div>
-        {cat.sale ? <div className={sass.sale}>{cat.sale}</div> : null}
+        {cat.sale ? <div className={sass.sale}>{cat.sale}%</div> : null}
       </div>
 
       <div className={sass.content}>
