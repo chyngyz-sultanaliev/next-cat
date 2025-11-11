@@ -61,7 +61,7 @@ async function Profile() {
   if (!profile) return <p>Ошибка загрузки профиля</p>;
 
   return (
-    <div className={sass.profile}>
+    <div className={`${sass.profile} container`}>
       <div className={sass.card}>
         <div className={sass.avatarWrapper}>
           {profile.avatar ? (

@@ -1,5 +1,5 @@
 import API_BASE_URL from '@/config/api';
-import Update from '@/src/components/page/admin/update/Update';
+import Update from '@/src/components/page/update/Update';
 import { CheckAuth } from '@/src/components/utils/check/CheckAuth';
 
 const page =  async () => {
